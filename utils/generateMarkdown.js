@@ -93,3 +93,5 @@ function generateMarkdown(resp) {
   _Copyright_ ${year} ${resp.user}
 `;
 }
+
+module.exports = generateMarkdown;
