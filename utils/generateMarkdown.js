@@ -35,24 +35,24 @@ function generateMarkdown(resp) {
 
   // features
   resp.features &&
-    (markdown += `## Features
+    (markdown += `## Features\n
 ${resp.features
   .split('\n')
   .map((feature) => feature.trim())
   .filter(Boolean)
   .map((feature) => `- [x] ${feature}`)
-  .join('\n')}
+  .join('\n')}\n
   `);
 
   // credits
   resp.credits &&
-    (markdown += `## Credits
+    (markdown += `## Credits\n
 ${resp.credits
   .split('\n')
   .map((credit) => credit.trim())
   .filter(Boolean)
   .map((credit) => `- ${credit}`)
-  .join('\n')}
+  .join('\n')}\n
   `);
 
   // tests
@@ -60,13 +60,13 @@ ${resp.credits
 
   // roadmap
   resp.roadmap &&
-    (markdown += `## Future Development
+    (markdown += `## Future Development\n
 ${resp.roadmap
   .split('\n')
   .map((dev) => dev.trim())
   .filter(Boolean)
   .map((dev) => `- ${dev}`)
-  .join('\n')}`);
+  .join('\n')}\n`);
 
   // contributions
   resp.contribute &&
@@ -84,6 +84,12 @@ Contributions are always welcome!\n
   // licence
   resp.license !== 'none' &&
     (markdown += `## License\n\n![License](https://img.shields.io/badge/license-${resp.license}-3558AE.svg?labelColor=2F2E32&style=for-the-badge&logo=simple-icons)\n\n`);
+
+  // questions
+
+  resp.email &&
+    (markdown += `## Contact\n
+If you have any questions, please contact me at ${resp.email}. Thank you!\n\n`);
 
   // copyright
   markdown += `Copyright &copy; ${year} [@${resp.user}](https://github.com/${resp.user})\n`;

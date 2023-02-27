@@ -12,6 +12,11 @@ const questions = [
   },
   {
     type: 'input',
+    name: 'email',
+    message: `What is your contact email address for any questions about the project?`,
+  },
+  {
+    type: 'input',
     name: 'repo',
     message: `What is the name for the GitHub repository?`,
   },
@@ -158,7 +163,7 @@ function init() {
   process.stdin.on('keypress', cancel);
 
   return prompt
-    .then(([resp]) => {
+    .then((resp) => {
       writeToFile(`./sample-readme/README.md`, generateMarkdown(resp));
       console.log(
         `Your README.md has been created. Find it at ${path.join(
