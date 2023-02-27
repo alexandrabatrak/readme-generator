@@ -1,104 +1,9 @@
-// // function to generate markdown for README
-// function generateMarkdown(resp) {
-//   let year = new Date().getFullYear();
-//   return `# ${resp.title}
-
-//   ${
-//     resp.toc
-//       ? `## Table of Contents
-
-//   - [About](#about)
-//   ${resp.installation ? `- [Installation](#installation)` : ''}
-//   ${resp.usage ? `- [Usage](#usage)` : ''}
-//   ${resp.credits ? `- [Credits](#credits)` : ''}
-//   ${resp.contribute ? `- [Contribute](#contribute)` : ''}
-//   - [License](#license)`
-//       : ''
-//   }
-
-//   ## About
-//   ${resp.description}
-
-//   ${
-//     resp.features
-//       ? `### Features
-
-//   ${resp.features}`
-//       : ''
-//   }
-
-//   ## Usage
-
-//   ${
-//     resp.installation
-//       ? `### Installation
-
-//   ${resp.installation}
-
-//   `
-//       : ''
-//   }
-
-//   ### [View Project :star:](https://${resp.user}.github.io/${resp.repo}
-//   ![Screenshot](${resp.screenshot})
-
-//   ${
-//     resp.credits
-//       ? `## Credits
-
-//   ${resp.credits}`
-//       : ''
-//   }
-
-//   ${
-//     resp.tests
-//       ? `## Tests
-
-//   ${resp.tests}`
-//       : ''
-//   }
-
-//   ${
-//     resp.roadmap
-//       ? `## Future development
-
-//   ${resp.roadmap}`
-//       : ''
-//   }
-
-//   ${
-//     resp.contribute
-//       ? `## Contribute
-
-//   Contributions are always welcome!
-
-//   See [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md) for ways to get started.
-
-//   ### Creating A Pull Request
-//     - Fork the Project
-//     - Create your Feature Branch (\`git checkout -b feature/AmazingFeature\`)
-//     - Commit your Changes (\`git commit -m 'Add some AmazingFeature'\`)
-//     - Push to the Branch (\`git push origin feature/AmazingFeature\`)
-//     - Open a Pull Request`
-//       : ''
-//   }
-//   ${
-//     resp.license !== 'none'
-//       ? `## Licence
-
-//       ![License](https://img.shields.io/badge/license-${resp.license}-blue.svg)`
-//       : ''
-//   }
-
-//   _Copyright_ ${year} ${resp.user}
-// `;
-// }
-
 module.exports = generateMarkdown;
 
 function generateMarkdown(resp) {
   const year = new Date().getFullYear();
-  let markdown = `# ${resp.title}\n\n`;
+  let markdown = `# ${resp.title ? resp.title : resp.repo}\n\n`;
+  resp.subtitle && (markdown += `${resp.subtitle}\n`);
 
   // about
   resp.about && (markdown += `## About\n\n${resp.about}\n\n`);
@@ -121,6 +26,7 @@ function generateMarkdown(resp) {
   resp.installation &&
     (markdown += `## Installation\n\n${resp.installation}\n\n`);
 
+  // deployment
   resp.deployment &&
     (markdown += `### [View Project :star:](https://${resp.user}.github.io/${resp.repo})\n\n`);
 
@@ -129,50 +35,45 @@ function generateMarkdown(resp) {
 
   // features
   resp.features &&
-    (markdown += `
-## Features
+    (markdown += `## Features
 ${resp.features
   .split('\n')
   .map((feature) => feature.trim())
   .filter(Boolean)
   .map((feature) => `- [x] ${feature}`)
   .join('\n')}
-
-`);
+  `);
 
   // credits
   resp.credits &&
-    (markdown += `
-## Credits
+    (markdown += `## Credits
 ${resp.credits
   .split('\n')
   .map((credit) => credit.trim())
   .filter(Boolean)
   .map((credit) => `- ${credit}`)
   .join('\n')}
-`);
+  `);
 
   // tests
   resp.tests && (markdown += `## Tests\n\n${resp.tests}\n\n`);
 
   // roadmap
   resp.roadmap &&
-    (markdown += `
-## Future Development
+    (markdown += `## Future Development
 ${resp.roadmap
   .split('\n')
   .map((dev) => dev.trim())
   .filter(Boolean)
   .map((dev) => `- ${dev}`)
-  .join('\n')}
-`);
+  .join('\n')}`);
 
   // contributions
   resp.contribute &&
     (markdown += `
 ## Contributing\n
 Contributions are always welcome!\n
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](https://www.contributor-covenant.org/version/2/1/code_of_conduct/)\n
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg?labelColor=2F2E32&style=for-the-badge&logo=simple-icons)](https://www.contributor-covenant.org/version/2/1/code_of_conduct/)\n
 ### Creating A Pull Request\n
 - Fork the project
 - Create your feature branch (\`git checkout -b feature/newfeature\`)
@@ -182,7 +83,7 @@ Contributions are always welcome!\n
 
   // licence
   resp.license !== 'none' &&
-    (markdown += `## License\n\n![License](https://img.shields.io/badge/license-${resp.license}-blue.svg)\n\n`);
+    (markdown += `## License\n\n![License](https://img.shields.io/badge/license-${resp.license}-3558AE.svg?labelColor=2F2E32&style=for-the-badge&logo=simple-icons)\n\n`);
 
   // copyright
   markdown += `Copyright &copy; ${year} [@${resp.user}](https://github.com/${resp.user})\n`;
