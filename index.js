@@ -31,9 +31,9 @@ const questions = [
     message: `Provide a short description explaining the what, why, and how of your project.`,
   },
   {
-    type: 'input',
+    type: 'editor',
     name: 'features',
-    message: `List any features this project has, if any.`,
+    message: 'Enter the project features (one per line):',
   },
   {
     type: 'input',
@@ -41,9 +41,9 @@ const questions = [
     message: `Do you have a screenshot? If yes, please provide the relative path to the image you want to use as the screenshot.`,
   },
   {
-    type: 'input',
+    type: 'editor',
     name: 'credits',
-    message: `List all contributors, links to resources, etc. here in the credits section.`,
+    message: `List all contributors, links to resources, etc. (one per line)`,
   },
   {
     type: 'input',
@@ -56,9 +56,9 @@ const questions = [
     message: `Would you like to specify a contribution section with generic details how to contribute to this project?`,
   },
   {
-    type: 'input',
+    type: 'editor',
     name: 'roadmap',
-    message: `If you have future plans for this project, you can specify a roadmap here.`,
+    message: `If you have future roadmap for this project, you can specify a future development steps here (one per line)`,
   },
   {
     type: 'confirm',

@@ -127,22 +127,51 @@ function generateMarkdown(resp) {
   resp.screenshot && (markdown += `![Screenshot](${resp.screenshot})\n\n`);
 
   // features
-  resp.features && (markdown += `## Features\n\n${resp.features}\n\n`);
+  resp.features &&
+    (markdown += `
+## Features
+${resp.features
+  .split('\n')
+  .map((feature) => feature.trim())
+  .filter(Boolean)
+  .map((feature) => `- [x] ${feature}`)
+  .join('\n')}
+
+`);
 
   // credits
-  resp.credits && (markdown += `## Credits\n\n${resp.credits}\n\n`);
+  resp.credits &&
+    (markdown += `
+## Credits
+${resp.credits
+  .split('\n')
+  .map((credit) => credit.trim())
+  .filter(Boolean)
+  .map((credit) => `- ${credit}`)
+  .join('\n')}
+`);
 
   // tests
   resp.tests && (markdown += `## Tests\n\n${resp.tests}\n\n`);
 
   // roadmap
-  resp.roadmap && (markdown += `## Future Development\n\n${resp.roadmap}\n\n`);
+  resp.roadmap &&
+    (markdown += `
+## Future Development
+${resp.roadmap
+  .split('\n')
+  .map((dev) => dev.trim())
+  .filter(Boolean)
+  .map((dev) => `- ${dev}`)
+  .join('\n')}
+`);
 
   // contributions
   resp.contribute &&
-    (markdown += `## Contributing\n
-    Contributions are always welcome!\n
-    [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)\n
+    (markdown += `
+## Contributing\n
+Contributions are always welcome!\n
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)\n
 ### Creating A Pull Request\n
 - Fork the project
 - Create your feature branch (\`git checkout -b feature/newfeature\`)
@@ -155,7 +184,7 @@ function generateMarkdown(resp) {
     (markdown += `## License\n\n![License](https://img.shields.io/badge/license-${resp.license}-blue.svg)\n\n`);
 
   // copyright
-  markdown += `Copyright &copy; ${year} ${resp.user}\n`;
+  markdown += `Copyright &copy; ${year} [@${resp.user}](https://github.com/${resp.user})\n`;
 
   return markdown;
 }
