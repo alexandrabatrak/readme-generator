@@ -121,7 +121,8 @@ function generateMarkdown(resp) {
   resp.installation &&
     (markdown += `## Installation\n\n${resp.installation}\n\n`);
 
-  markdown += `### [View Project :star:](https://${resp.user}.github.io/${resp.repo})\n\n`;
+  resp.deployment &&
+    (markdown += `### [View Project :star:](https://${resp.user}.github.io/${resp.repo})\n\n`);
 
   // screenshot
   resp.screenshot && (markdown += `![Screenshot](${resp.screenshot})\n\n`);
@@ -171,7 +172,7 @@ ${resp.roadmap
     (markdown += `
 ## Contributing\n
 Contributions are always welcome!\n
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)\n
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](https://www.contributor-covenant.org/version/2/1/code_of_conduct/)\n
 ### Creating A Pull Request\n
 - Fork the project
 - Create your feature branch (\`git checkout -b feature/newfeature\`)

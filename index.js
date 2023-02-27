@@ -21,6 +21,11 @@ const questions = [
     choices: ['none', 'MIT', 'APACHE2.0', 'Boost1.0', 'MPL2.0', 'BSD2', 'BSD3'],
   },
   {
+    type: 'confirm',
+    name: 'deployment',
+    message: `Is your project deplyoed?`,
+  },
+  {
     type: 'input',
     name: 'title',
     message: `What is the name of your project?`,
