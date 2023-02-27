@@ -31,36 +31,37 @@ function generateMarkdown(resp) {
     (markdown += `### [View Project :star:](https://${resp.user}.github.io/${resp.repo})\n\n`);
 
   // screenshot
-  resp.screenshot && (markdown += `![Screenshot](${resp.screenshot})\n\n`);
+  resp.screenshot && (markdown += `![Screenshot](${resp.screenshot})\n`);
 
   // features
   resp.features &&
-    (markdown += `## Features\n
+    (markdown += `
+## Features\n
 ${resp.features
   .split('\n')
   .map((feature) => feature.trim())
   .filter(Boolean)
   .map((feature) => `- [x] ${feature}`)
-  .join('\n')}\n
-  `);
+  .join('\n')}\n`);
 
   // credits
   resp.credits &&
-    (markdown += `## Credits\n
+    (markdown += `
+## Credits\n
 ${resp.credits
   .split('\n')
   .map((credit) => credit.trim())
   .filter(Boolean)
   .map((credit) => `- ${credit}`)
-  .join('\n')}\n
-  `);
+  .join('\n')}\n`);
 
   // tests
   resp.tests && (markdown += `## Tests\n\n${resp.tests}\n\n`);
 
   // roadmap
   resp.roadmap &&
-    (markdown += `## Future Development\n
+    (markdown += `
+## Future Development\n
 ${resp.roadmap
   .split('\n')
   .map((dev) => dev.trim())
