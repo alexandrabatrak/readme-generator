@@ -77,14 +77,16 @@ function writeToFile(fileName, resp) {
   return fs.writeFileSync(path.join(process.cwd(), fileName), resp);
 }
 
-function init() {}
-inquirer
-  .prompt(questions)
-  .then((result) => {
-    writeToFile(`./sample-readme/README.md`, generateMarkdown({ ...result }));
-    console.log('Your README has been created.');
-  })
-  .catch((error) => {
-    console.log(error);
-  });
+function init() {
+  inquirer
+    .prompt(questions)
+    .then((result) => {
+      const readme = path.join(__dirname, 'sample-readme', 'README.md');
+      writeToFile(readme, generateMarkdown({ ...result }));
+      console.log(`Your README has been created. Find it at ${readme}`);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
 init();
