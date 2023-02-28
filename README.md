@@ -27,6 +27,9 @@ node index.js
 ```
 You will then be prompted for all the information about the project.
 
+![preview](./assets/images/readme-preview.gif)
+Full preview video available [here](https://drive.google.com/file/d/1MvTq6E86IUz2eA6WB46SCcGHqV1GEJet/view)
+
 ## Tools
 
 - [Node.js](https://nodejs.org/en/)
