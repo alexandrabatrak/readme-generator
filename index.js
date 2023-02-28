@@ -14,6 +14,13 @@ const questions = [
     type: 'input',
     name: 'email',
     message: `What is your contact email address for any questions about the project?`,
+    validate: function (value) {
+      let valid = value.match(/^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/);
+      if (valid) {
+        return true;
+      }
+      return `Please add a valid email address`;
+    },
   },
   {
     type: 'input',
@@ -164,11 +171,11 @@ function init() {
 
   return prompt
     .then((resp) => {
-      writeToFile(`./sample-readme/README.md`, generateMarkdown(resp));
+      writeToFile(`./generated-readme/README.md`, generateMarkdown(resp));
       console.log(
-        `Your README.md has been created. Find it at ${path.join(
+        `Your README.md has been created.✔️  Find it at ${path.join(
           __dirname,
-          'sample-readme',
+          'generated-readme',
           'README.md'
         )}`
       );
