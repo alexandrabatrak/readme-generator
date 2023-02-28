@@ -99,6 +99,6 @@ If you have any questions, please contact me at ${resp.email}. Thank you!\n\n`);
   // copyright
   markdown += `Copyright &copy; ${year} [:octocat:@${resp.user}](https://github.com/${resp.user})\n`;
 
-  markdown += `\n\n<hr><p style="text-align:right">_This README was generated with ❤️ by [readme-generator](https://github.com/alexandrabatrak/readme-generator)_</p>`;
+  markdown += `\n\n<hr><p style="text-align:right; font-style:italic">This README was generated with ❤️ by <a href="https://github.com/alexandrabatrak/readme-generator">readme-generator</a></p>`;
   return markdown;
 }

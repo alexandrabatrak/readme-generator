@@ -26,7 +26,6 @@ install
 
 ### [View Project :star:](https://alexandrabatrak.github.io/readme-generator-sample)
 
-
 ## Features
 
 - [x] Feature 1
@@ -60,7 +59,7 @@ Contributions are always welcome!
 
 ## License
 
-This application is covered by the MIT license. 
+This application is covered by the MIT license.
 
 ## Contact
 
@@ -68,5 +67,4 @@ If you have any questions, please contact me at contact@alexandrabatrak.uk. Than
 
 Copyright &copy; 2023 [:octocat:@alexandrabatrak](https://github.com/alexandrabatrak)
 
-
-<hr><p style="text-align:right">_This README was generated with ❤️ by [readme-generator](https://github.com/alexandrabatrak/readme-generator)_</p>
+<hr><p style="text-align:right; font-style:italic">This README was generated with ❤️ by <a href="https://github.com/alexandrabatrak/readme-generator">readme-generator</a></p>
