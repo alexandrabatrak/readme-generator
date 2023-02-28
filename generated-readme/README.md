@@ -2,11 +2,11 @@
 
 Sample subtitle
 
-![License](https://img.shields.io/badge/license-APACHE2.0-3558AE.svg?labelColor=2F2E32&style=for-the-badge&logo=simple-icons)
+![License](https://img.shields.io/badge/license-MIT-3558AE.svg?labelColor=2F2E32&style=for-the-badge&logo=simple-icons)
 
 ## About
 
-This is a sample README generated with readme-generator.
+This is a sample description
 
 ## Table of Contents
 
@@ -16,22 +16,16 @@ This is a sample README generated with readme-generator.
 - [Future Development](#future-development)
 - [Contributing](#contributing)
 - [License](#license)
+- [Contact](#contact)
 
 ## Installation
 
 ```
-install command
+install
 ```
-
-Next steps:
-
-1. Step 1
-2. Step 2
-3. Step 3
 
 ### [View Project :star:](https://alexandrabatrak.github.io/readme-generator-sample)
 
-![Screenshot](./assets/images/screenshot.png)
 
 ## Features
 
@@ -43,12 +37,12 @@ Next steps:
 
 - Credits 1
 - Credits 2
-- Credits 3
+- [Credits 3](credits3.link)
 
 ## Future Development
 
 - Add feature
-- Issue #788
+- Issue #988
 
 ## Contributing
 
@@ -66,11 +60,13 @@ Contributions are always welcome!
 
 ## License
 
-This application is covered by the APACHE2.0 license.
+This application is covered by the MIT license. 
 
 ## Contact
 
 If you have any questions, please contact me at contact@alexandrabatrak.uk. Thank you!
 
 Copyright &copy; 2023 [:octocat:@alexandrabatrak](https://github.com/alexandrabatrak)
-_This README was generated with ❤️ by [readme-generator](https://github.com/alexandrabatrak/readme-generator)_
+
+
+<hr><p style="text-align:right">_This README was generated with ❤️ by [readme-generator](https://github.com/alexandrabatrak/readme-generator)_</p>
