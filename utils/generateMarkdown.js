@@ -3,7 +3,11 @@ module.exports = generateMarkdown;
 function generateMarkdown(resp) {
   const year = new Date().getFullYear();
   let markdown = `# ${resp.title ? resp.title : resp.repo}\n\n`;
-  resp.subtitle && (markdown += `${resp.subtitle}\n`);
+  resp.subtitle && (markdown += `${resp.subtitle}\n\n`);
+
+  // licence badge
+  resp.license !== 'none' &&
+    (markdown += `![License](https://img.shields.io/badge/license-${resp.license}-3558AE.svg?labelColor=2F2E32&style=for-the-badge&logo=simple-icons)\n\n`);
 
   // about
   resp.about && (markdown += `## About\n\n${resp.about}\n\n`);
@@ -40,7 +44,7 @@ function generateMarkdown(resp) {
 ${resp.features
   .split('\n')
   .map((feature) => feature.trim())
-  .filter(Boolean)
+  .filter(Boolean) // removes empty lines
   .map((feature) => `- [x] ${feature}`)
   .join('\n')}\n`);
 
@@ -84,16 +88,16 @@ Contributions are always welcome!\n
 
   // licence
   resp.license !== 'none' &&
-    (markdown += `## License\n\n![License](https://img.shields.io/badge/license-${resp.license}-3558AE.svg?labelColor=2F2E32&style=for-the-badge&logo=simple-icons)\n\n`);
+    (markdown += `## License\n\nThis application is covered by the ${resp.license} license. \n\n`);
 
   // questions
-
   resp.email &&
     (markdown += `## Contact\n
 If you have any questions, please contact me at ${resp.email}. Thank you!\n\n`);
 
   // copyright
-  markdown += `Copyright &copy; ${year} [@${resp.user}](https://github.com/${resp.user})\n`;
+  markdown += `Copyright &copy; ${year} [:octocat:@${resp.user}](https://github.com/${resp.user})\n`;
 
+  markdown += `_This README was generated with ❤️ by [readme-generator](https://github.com/alexandrabatrak/readme-generator)_`;
   return markdown;
 }
