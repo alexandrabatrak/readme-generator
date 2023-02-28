@@ -23,6 +23,7 @@ function generateMarkdown(resp) {
       (markdown += `- [Future Development](#future-development)\n`);
     resp.contribute && (markdown += `- [Contributing](#contributing)\n`);
     resp.license !== 'none' && (markdown += `- [License](#license)\n`);
+    resp.email && (markdown += `- [Contact](#contact)\n`);
     markdown += '\n';
   }
 
@@ -98,6 +99,6 @@ If you have any questions, please contact me at ${resp.email}. Thank you!\n\n`);
   // copyright
   markdown += `Copyright &copy; ${year} [:octocat:@${resp.user}](https://github.com/${resp.user})\n`;
 
-  markdown += `_This README was generated with ❤️ by [readme-generator](https://github.com/alexandrabatrak/readme-generator)_`;
+  markdown += `\n\n<hr><p style="text-align:right">_This README was generated with ❤️ by [readme-generator](https://github.com/alexandrabatrak/readme-generator)_</p>`;
   return markdown;
 }
