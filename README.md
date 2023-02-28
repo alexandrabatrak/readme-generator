@@ -32,6 +32,11 @@ You will then be prompted for all the information about the project.
 - [Node.js](https://nodejs.org/en/)
 - [npm](https://www.npmjs.com/)
 - [Inquirer](https://www.npmjs.com/package/inquirer)
+- [Badges](shields.io)
+
+## Credits
+
+- [Email validation regEx](https://stackoverflow.com/questions/22683358/email-validation-expression-w-w-w-w-w-w-allows)
 
 ## Licence
 
