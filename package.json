@@ -1,14 +1,14 @@
 {
-  "name": "static-site",
+  "name": "readme-generator",
   "version": "1.0.0",
-  "description": "",
+  "description": "CLI app to generate README.md for GitHub repositories with inquirer.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Alexandra Batrak",
+  "license": "MIT",
   "dependencies": {
-    "inquirer": "^6.5.2"
+    "inquirer": "^9.1.1"
   }
 }
