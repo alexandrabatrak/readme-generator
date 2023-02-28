@@ -1,9 +1,12 @@
 # Sample README
 
 Sample subtitle
+
+![License](https://img.shields.io/badge/license-APACHE2.0-3558AE.svg?labelColor=2F2E32&style=for-the-badge&logo=simple-icons)
+
 ## About
 
-vksfjhsg
+This is a sample README generated with readme-generator.
 
 ## Table of Contents
 
@@ -16,28 +19,36 @@ vksfjhsg
 
 ## Installation
 
-dvfbgfikv 
+```
+install command
+```
 
+Next steps:
+
+1. Step 1
+2. Step 2
+3. Step 3
 
 ### [View Project :star:](https://alexandrabatrak.github.io/readme-generator-sample)
 
-![Screenshot](./assets/images/s.png)
+![Screenshot](./assets/images/screenshot.png)
 
 ## Features
 
-- [x] fvjjkgfn
-- [x] fbogjb
+- [x] Feature 1
+- [x] Feature 2
+- [x] Feature 3
 
 ## Credits
 
-- dfv 1
-- oeb1
+- Credits 1
+- Credits 2
+- Credits 3
 
 ## Future Development
 
-- fbsb [#erlk
-- eogiejr
-- wjnk
+- Add feature
+- Issue #788
 
 ## Contributing
 
@@ -55,10 +66,11 @@ Contributions are always welcome!
 
 ## License
 
-![License](https://img.shields.io/badge/license-APACHE2.0-3558AE.svg?labelColor=2F2E32&style=for-the-badge&logo=simple-icons)
+This application is covered by the APACHE2.0 license.
 
 ## Contact
 
-If you have any questions, please contact me at contact@alexandrabatrak. Thank you!
+If you have any questions, please contact me at contact@alexandrabatrak.uk. Thank you!
 
-Copyright &copy; 2023 [@alexandrabatrak](https://github.com/alexandrabatrak)
+Copyright &copy; 2023 [:octocat:@alexandrabatrak](https://github.com/alexandrabatrak)
+_This README was generated with ❤️ by [readme-generator](https://github.com/alexandrabatrak/readme-generator)_
