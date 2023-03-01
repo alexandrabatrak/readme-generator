@@ -1,5 +1,3 @@
-module.exports = generateMarkdown;
-
 function generateMarkdown(resp) {
   const year = new Date().getFullYear();
   let markdown = `# ${resp.title ? resp.title : resp.repo}\n\n`;
@@ -102,3 +100,5 @@ If you have any questions, please contact me at ${resp.email}. Thank you!\n\n`);
   markdown += `\n\n<hr><p style="text-align:right; font-style:italic">This README was generated with ❤️ by <a href="https://github.com/alexandrabatrak/readme-generator">readme-generator</a></p>`;
   return markdown;
 }
+
+module.exports = generateMarkdown;
