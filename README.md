@@ -10,7 +10,7 @@ Increase your productivity with this node CLI application that uses the _inquire
 To use this application, fork the repository and clone it to your local environment with:
 
 ```
-git clone git@github.com:alexandrabatrak/readme-generator.git
+git clone git@github.com:<your_username>/readme-generator.git
 ```
 Then install necessary dependencies with:
 
