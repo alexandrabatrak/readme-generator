@@ -46,4 +46,6 @@ Full preview video available [here](https://drive.google.com/file/d/1MvTq6E86IUz
 
 Licenced under the [MIT](LICENSE) license.
 
+[![Image of github-profile-views-counter](https://github.com/alexandrabatrak/github-profile-views-counter/blob/master/svg/606068317/badge.svg)](https://github.com/alexandrabatrak/github-profile-views-counter/blob/master/readme/606068317/week.md)
+
 _Copyright © 2023 Alexandra Batrak_
